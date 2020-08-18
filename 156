@@ -1,0 +1,137 @@
+[root@pbx-orthomundi ~]# rasterisk -rvvvvvvvvvvvvvvvvv | grep "2629"
+    -- Executing [156@from-internal:1] Macro("SIP/2629-0000161b", "user-callerid,LIMIT,EXTERNAL,") in new stack
+    -- Executing [s@macro-user-callerid:1] Set("SIP/2629-0000161b", "TOUCH_MONITOR=1597769513.9095") in new stack
+    -- Executing [s@macro-user-callerid:2] Set("SIP/2629-0000161b", "AMPUSER=2629") in new stack
+    -- Executing [s@macro-user-callerid:3] GotoIf("SIP/2629-0000161b", "0?report") in new stack
+    -- Executing [s@macro-user-callerid:4] ExecIf("SIP/2629-0000161b", "1?Set(REALCALLERIDNUM=2629)") in new stack
+    -- Executing [s@macro-user-callerid:5] Set("SIP/2629-0000161b", "AMPUSER=2629") in new stack
+    -- Executing [s@macro-user-callerid:6] GotoIf("SIP/2629-0000161b", "0?limit") in new stack
+    -- Executing [s@macro-user-callerid:7] Set("SIP/2629-0000161b", "AMPUSERCIDNAME=2629 - Cristiano") in new stack
+    -- Executing [s@macro-user-callerid:8] GotoIf("SIP/2629-0000161b", "0?report") in new stack
+    -- Executing [s@macro-user-callerid:9] Set("SIP/2629-0000161b", "AMPUSERCID=2629") in new stack
+    -- Executing [s@macro-user-callerid:10] Set("SIP/2629-0000161b", "__DIAL_OPTIONS=Tt") in new stack
+    -- Executing [s@macro-user-callerid:11] Set("SIP/2629-0000161b", "CALLERID(all)="2629 - Cristiano" <2629>") in new stack
+    -- Executing [s@macro-user-callerid:12] GotoIf("SIP/2629-0000161b", "0?limit") in new stack
+    -- Executing [s@macro-user-callerid:13] ExecIf("SIP/2629-0000161b", "1?Set(GROUP(concurrency_limit)=2629)") in new stack
+    -- Executing [s@macro-user-callerid:14] ExecIf("SIP/2629-0000161b", "1?Set(CHANNEL(language)=pt_BR)") in new stack
+    -- Executing [s@macro-user-callerid:15] GotoIf("SIP/2629-0000161b", "1?continue") in new stack
+    -- Executing [s@macro-user-callerid:28] Set("SIP/2629-0000161b", "CALLERID(number)=2629") in new stack
+    -- Executing [s@macro-user-callerid:29] Set("SIP/2629-0000161b", "CALLERID(name)=2629 - Cristiano") in new stack
+    -- Executing [s@macro-user-callerid:30] Set("SIP/2629-0000161b", "CDR(cnum)=2629") in new stack
+    -- Executing [s@macro-user-callerid:31] Set("SIP/2629-0000161b", "CDR(cnam)=2629 - Cristiano") in new stack
+    -- Executing [s@macro-user-callerid:32] Set("SIP/2629-0000161b", "CHANNEL(language)=pt_BR") in new stack
+    -- Executing [156@from-internal:2] Set("SIP/2629-0000161b", "ROUTE_CIDSAVE="2629 - Cristiano" <2629>") in new stack
+    -- Executing [156@from-internal:3] Set("SIP/2629-0000161b", "MOHCLASS=default") in new stack
+    -- Executing [156@from-internal:4] Set("SIP/2629-0000161b", "_NODEST=") in new stack
+    -- Executing [156@from-internal:5] Gosub("SIP/2629-0000161b", "sub-record-check,s,1(out,156,)") in new stack
+    -- Executing [s@sub-record-check:1] Set("SIP/2629-0000161b", "REC_POLICY_MODE_SAVE=") in new stack
+    -- Executing [s@sub-record-check:2] GotoIf("SIP/2629-0000161b", "1?check") in new stack
+    -- Executing [s@sub-record-check:7] Set("SIP/2629-0000161b", "__MON_FMT=wav") in new stack
+    -- Executing [s@sub-record-check:8] GotoIf("SIP/2629-0000161b", "1?next") in new stack
+    -- Executing [s@sub-record-check:11] ExecIf("SIP/2629-0000161b", "0?Return()") in new stack
+    -- Executing [s@sub-record-check:12] ExecIf("SIP/2629-0000161b", "0?Set(__REC_POLICY_MODE=)") in new stack
+    -- Executing [s@sub-record-check:13] GotoIf("SIP/2629-0000161b", "0?out,1") in new stack
+    -- Executing [s@sub-record-check:14] Set("SIP/2629-0000161b", "__REC_STATUS=INITIALIZED") in new stack
+    -- Executing [s@sub-record-check:15] Set("SIP/2629-0000161b", "NOW=1597769513") in new stack
+    -- Executing [s@sub-record-check:16] Set("SIP/2629-0000161b", "__DAY=18") in new stack
+    -- Executing [s@sub-record-check:17] Set("SIP/2629-0000161b", "__MONTH=08") in new stack
+    -- Executing [s@sub-record-check:18] Set("SIP/2629-0000161b", "__YEAR=2020") in new stack
+    -- Executing [s@sub-record-check:19] Set("SIP/2629-0000161b", "__TIMESTR=20200818-135153") in new stack
+    -- Executing [s@sub-record-check:20] Set("SIP/2629-0000161b", "__FROMEXTEN=2629") in new stack
+    -- Executing [s@sub-record-check:21] Set("SIP/2629-0000161b", "__CALLFILENAME=out-156-2629-20200818-135153-1597769513.9095") in new stack
+    -- Executing [s@sub-record-check:22] Goto("SIP/2629-0000161b", "out,1") in new stack
+    -- Executing [out@sub-record-check:1] ExecIf("SIP/2629-0000161b", "1?Set(__REC_POLICY_MODE=never)") in new stack
+    -- Executing [out@sub-record-check:2] GosubIf("SIP/2629-0000161b", "0?record,1(exten,156,2629)") in new stack
+    -- Executing [out@sub-record-check:3] Return("SIP/2629-0000161b", "") in new stack
+    -- Executing [156@from-internal:6] Macro("SIP/2629-0000161b", "dialout-trunk,2,156,,off") in new stack
+    -- Executing [s@macro-dialout-trunk:1] Set("SIP/2629-0000161b", "DIAL_TRUNK=2") in new stack
+    -- Executing [s@macro-dialout-trunk:2] GosubIf("SIP/2629-0000161b", "0?sub-pincheck,s,1()") in new stack
+    -- Executing [s@macro-dialout-trunk:3] GotoIf("SIP/2629-0000161b", "0?disabletrunk,1") in new stack
+    -- Executing [s@macro-dialout-trunk:4] Set("SIP/2629-0000161b", "DIAL_NUMBER=156") in new stack
+    -- Executing [s@macro-dialout-trunk:5] Set("SIP/2629-0000161b", "DIAL_TRUNK_OPTIONS=Tt") in new stack
+    -- Executing [s@macro-dialout-trunk:6] Set("SIP/2629-0000161b", "OUTBOUND_GROUP=OUT_2") in new stack
+    -- Executing [s@macro-dialout-trunk:7] GotoIf("SIP/2629-0000161b", "1?nomax") in new stack
+    -- Executing [s@macro-dialout-trunk:9] GotoIf("SIP/2629-0000161b", "0?skipoutcid") in new stack
+    -- Executing [s@macro-dialout-trunk:10] Set("SIP/2629-0000161b", "DIAL_TRUNK_OPTIONS=Tt") in new stack
+    -- Executing [s@macro-dialout-trunk:11] Macro("SIP/2629-0000161b", "outbound-callerid,2") in new stack
+    -- Executing [s@macro-outbound-callerid:1] ExecIf("SIP/2629-0000161b", "0?Set(CALLERPRES()=)") in new stack
+    -- Executing [s@macro-outbound-callerid:2] ExecIf("SIP/2629-0000161b", "0?Set(REALCALLERIDNUM=2629)") in new stack
+    -- Executing [s@macro-outbound-callerid:3] GotoIf("SIP/2629-0000161b", "1?normcid") in new stack
+    -- Executing [s@macro-outbound-callerid:6] Set("SIP/2629-0000161b", "USEROUTCID=") in new stack
+    -- Executing [s@macro-outbound-callerid:7] Set("SIP/2629-0000161b", "EMERGENCYCID=") in new stack
+    -- Executing [s@macro-outbound-callerid:8] Set("SIP/2629-0000161b", "TRUNKOUTCID=") in new stack
+    -- Executing [s@macro-outbound-callerid:9] GotoIf("SIP/2629-0000161b", "1?trunkcid") in new stack
+    -- Executing [s@macro-outbound-callerid:14] ExecIf("SIP/2629-0000161b", "0?Set(CALLERID(all)=)") in new stack
+    -- Executing [s@macro-outbound-callerid:15] ExecIf("SIP/2629-0000161b", "0?Set(CALLERID(all)=)") in new stack
+    -- Executing [s@macro-outbound-callerid:16] ExecIf("SIP/2629-0000161b", "0?Set(CALLERID(all)=)") in new stack
+    -- Executing [s@macro-outbound-callerid:17] ExecIf("SIP/2629-0000161b", "0?Set(CALLERPRES()=prohib_passed_screen)") in new stack
+    -- Executing [s@macro-outbound-callerid:18] Set("SIP/2629-0000161b", "CDR(outbound_cnum)=2629") in new stack
+    -- Executing [s@macro-outbound-callerid:19] Set("SIP/2629-0000161b", "CDR(outbound_cnam)=2629 - Cristiano") in new stack
+    -- Executing [s@macro-dialout-trunk:12] GosubIf("SIP/2629-0000161b", "0?sub-flp-2,s,1()") in new stack
+    -- Executing [s@macro-dialout-trunk:13] Set("SIP/2629-0000161b", "OUTNUM=156") in new stack
+    -- Executing [s@macro-dialout-trunk:14] Set("SIP/2629-0000161b", "custom=SIP/Voip_Umg1") in new stack
+    -- Executing [s@macro-dialout-trunk:15] ExecIf("SIP/2629-0000161b", "0?Set(DIAL_TRUNK_OPTIONS=M(setmusic^default)Tt)") in new stack
+    -- Executing [s@macro-dialout-trunk:16] ExecIf("SIP/2629-0000161b", "0?Set(DIAL_TRUNK_OPTIONS=TtM(confirm))") in new stack
+    -- Executing [s@macro-dialout-trunk:17] Macro("SIP/2629-0000161b", "dialout-trunk-predial-hook,") in new stack
+    -- Executing [s@macro-dialout-trunk-predial-hook:1] MacroExit("SIP/2629-0000161b", "") in new stack
+    -- Executing [s@macro-dialout-trunk:18] GotoIf("SIP/2629-0000161b", "0?bypass,1") in new stack
+    -- Executing [s@macro-dialout-trunk:19] ExecIf("SIP/2629-0000161b", "1?Set(CONNECTEDLINE(num,i)=156)") in new stack
+    -- Executing [s@macro-dialout-trunk:20] ExecIf("SIP/2629-0000161b", "1?Set(CONNECTEDLINE(name,i)=CID:2629)") in new stack
+    -- Executing [s@macro-dialout-trunk:21] GotoIf("SIP/2629-0000161b", "0?customtrunk") in new stack
+    -- Executing [s@macro-dialout-trunk:22] Dial("SIP/2629-0000161b", "SIP/Voip_Umg1/156,300,Tt") in new stack
+    -- Executing [s@macro-dialout-trunk:23] NoOp("SIP/2629-0000161b", "Dial failed for some reason with DIALSTATUS = CONGESTION and HANGUPCAUSE = 34") in new stack
+    -- Executing [s@macro-dialout-trunk:24] GotoIf("SIP/2629-0000161b", "0?continue,1:s-CONGESTION,1") in new stack
+    -- Executing [s-CONGESTION@macro-dialout-trunk:1] Set("SIP/2629-0000161b", "RC=34") in new stack
+    -- Executing [s-CONGESTION@macro-dialout-trunk:2] Goto("SIP/2629-0000161b", "34,1") in new stack
+    -- Executing [34@macro-dialout-trunk:1] Goto("SIP/2629-0000161b", "continue,1") in new stack
+    -- Executing [continue@macro-dialout-trunk:1] NoOp("SIP/2629-0000161b", "TRUNK Dial failed due to CONGESTION HANGUPCAUSE: 34 - failing through to other trunks") in new stack
+    -- Executing [continue@macro-dialout-trunk:2] Set("SIP/2629-0000161b", "CALLERID(number)=2629") in new stack
+    -- Executing [156@from-internal:7] Macro("SIP/2629-0000161b", "dialout-trunk,1,156,,off") in new stack
+    -- Executing [s@macro-dialout-trunk:1] Set("SIP/2629-0000161b", "DIAL_TRUNK=1") in new stack
+    -- Executing [s@macro-dialout-trunk:2] GosubIf("SIP/2629-0000161b", "0?sub-pincheck,s,1()") in new stack
+    -- Executing [s@macro-dialout-trunk:3] GotoIf("SIP/2629-0000161b", "0?disabletrunk,1") in new stack
+    -- Executing [s@macro-dialout-trunk:4] Set("SIP/2629-0000161b", "DIAL_NUMBER=156") in new stack
+    -- Executing [s@macro-dialout-trunk:5] Set("SIP/2629-0000161b", "DIAL_TRUNK_OPTIONS=Tt") in new stack
+    -- Executing [s@macro-dialout-trunk:6] Set("SIP/2629-0000161b", "OUTBOUND_GROUP=OUT_1") in new stack
+    -- Executing [s@macro-dialout-trunk:7] GotoIf("SIP/2629-0000161b", "1?nomax") in new stack
+    -- Executing [s@macro-dialout-trunk:9] GotoIf("SIP/2629-0000161b", "0?skipoutcid") in new stack
+    -- Executing [s@macro-dialout-trunk:10] Set("SIP/2629-0000161b", "DIAL_TRUNK_OPTIONS=Tt") in new stack
+    -- Executing [s@macro-dialout-trunk:11] Macro("SIP/2629-0000161b", "outbound-callerid,1") in new stack
+    -- Executing [s@macro-outbound-callerid:1] ExecIf("SIP/2629-0000161b", "0?Set(CALLERPRES()=)") in new stack
+    -- Executing [s@macro-outbound-callerid:2] ExecIf("SIP/2629-0000161b", "0?Set(REALCALLERIDNUM=2629)") in new stack
+    -- Executing [s@macro-outbound-callerid:3] GotoIf("SIP/2629-0000161b", "1?normcid") in new stack
+    -- Executing [s@macro-outbound-callerid:6] Set("SIP/2629-0000161b", "USEROUTCID=") in new stack
+    -- Executing [s@macro-outbound-callerid:7] Set("SIP/2629-0000161b", "EMERGENCYCID=") in new stack
+    -- Executing [s@macro-outbound-callerid:8] Set("SIP/2629-0000161b", "TRUNKOUTCID=") in new stack
+    -- Executing [s@macro-outbound-callerid:9] GotoIf("SIP/2629-0000161b", "1?trunkcid") in new stack
+    -- Executing [s@macro-outbound-callerid:14] ExecIf("SIP/2629-0000161b", "0?Set(CALLERID(all)=)") in new stack
+    -- Executing [s@macro-outbound-callerid:15] ExecIf("SIP/2629-0000161b", "0?Set(CALLERID(all)=)") in new stack
+    -- Executing [s@macro-outbound-callerid:16] ExecIf("SIP/2629-0000161b", "0?Set(CALLERID(all)=)") in new stack
+    -- Executing [s@macro-outbound-callerid:17] ExecIf("SIP/2629-0000161b", "0?Set(CALLERPRES()=prohib_passed_screen)") in new stack
+    -- Executing [s@macro-outbound-callerid:18] Set("SIP/2629-0000161b", "CDR(outbound_cnum)=2629") in new stack
+    -- Executing [s@macro-outbound-callerid:19] Set("SIP/2629-0000161b", "CDR(outbound_cnam)=2629 - Cristiano") in new stack
+    -- Executing [s@macro-dialout-trunk:12] GosubIf("SIP/2629-0000161b", "0?sub-flp-1,s,1()") in new stack
+    -- Executing [s@macro-dialout-trunk:13] Set("SIP/2629-0000161b", "OUTNUM=156") in new stack
+    -- Executing [s@macro-dialout-trunk:14] Set("SIP/2629-0000161b", "custom=SIP/Voip_Umg2") in new stack
+    -- Executing [s@macro-dialout-trunk:15] ExecIf("SIP/2629-0000161b", "0?Set(DIAL_TRUNK_OPTIONS=M(setmusic^default)Tt)") in new stack
+    -- Executing [s@macro-dialout-trunk:16] ExecIf("SIP/2629-0000161b", "0?Set(DIAL_TRUNK_OPTIONS=TtM(confirm))") in new stack
+    -- Executing [s@macro-dialout-trunk:17] Macro("SIP/2629-0000161b", "dialout-trunk-predial-hook,") in new stack
+    -- Executing [s@macro-dialout-trunk-predial-hook:1] MacroExit("SIP/2629-0000161b", "") in new stack
+    -- Executing [s@macro-dialout-trunk:18] GotoIf("SIP/2629-0000161b", "0?bypass,1") in new stack
+    -- Executing [s@macro-dialout-trunk:19] ExecIf("SIP/2629-0000161b", "1?Set(CONNECTEDLINE(num,i)=156)") in new stack
+    -- Executing [s@macro-dialout-trunk:20] ExecIf("SIP/2629-0000161b", "1?Set(CONNECTEDLINE(name,i)=CID:2629)") in new stack
+    -- Executing [s@macro-dialout-trunk:21] GotoIf("SIP/2629-0000161b", "0?customtrunk") in new stack
+    -- Executing [s@macro-dialout-trunk:22] Dial("SIP/2629-0000161b", "SIP/Voip_Umg2/156,300,Tt") in new stack
+    -- Executing [s@macro-dialout-trunk:23] NoOp("SIP/2629-0000161b", "Dial failed for some reason with DIALSTATUS = CONGESTION and HANGUPCAUSE = 34") in new stack
+    -- Executing [s@macro-dialout-trunk:24] GotoIf("SIP/2629-0000161b", "0?continue,1:s-CONGESTION,1") in new stack
+    -- Executing [s-CONGESTION@macro-dialout-trunk:1] Set("SIP/2629-0000161b", "RC=34") in new stack
+    -- Executing [s-CONGESTION@macro-dialout-trunk:2] Goto("SIP/2629-0000161b", "34,1") in new stack
+    -- Executing [34@macro-dialout-trunk:1] Goto("SIP/2629-0000161b", "continue,1") in new stack
+    -- Executing [continue@macro-dialout-trunk:1] NoOp("SIP/2629-0000161b", "TRUNK Dial failed due to CONGESTION HANGUPCAUSE: 34 - failing through to other trunks") in new stack
+    -- Executing [continue@macro-dialout-trunk:2] Set("SIP/2629-0000161b", "CALLERID(number)=2629") in new stack
+    -- Executing [156@from-internal:8] Set("SIP/2629-0000161b", "CALLERID(all)="2629 - Cristiano" <2629>") in new stack
+    -- Executing [156@from-internal:9] Set("SIP/2629-0000161b", "_KEEPCID=TRUE") in new stack
+    -- Executing [156@from-internal:10] Goto("SIP/2629-0000161b", "app-blackhole,hangup,1") in new stack
+    -- Executing [hangup@app-blackhole:1] NoOp("SIP/2629-0000161b", "Blackhole Dest: Hangup") in new stack
+    -- Executing [hangup@app-blackhole:2] Hangup("SIP/2629-0000161b", "") in new stack
+  == Spawn extension (app-blackhole, hangup, 2) exited non-zero on 'SIP/2629-0000161b'
